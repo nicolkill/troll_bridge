@@ -12,5 +12,4 @@ defmodule TrollBridge.PhoenixController do
       import TrollBridge.PhoenixController
     end
   end
-
 end

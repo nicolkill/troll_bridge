@@ -1,5 +1,4 @@
 defmodule TrollBridge.Meta.FunctionLocker do
-
   alias Precuter.Args, as: PrecuterArgs
   alias Precuter.Function, as: PrecuterFunction
 
@@ -17,13 +16,13 @@ defmodule TrollBridge.Meta.FunctionLocker do
 
       [{_custom_scope, action}] = tuple_action ->
         if Enum.member?(TrollBridge.allowed_actions(), action),
-           do: perform_lock(tuple_action, env, name, args, guards),
-           else: :pass
+          do: perform_lock(tuple_action, env, name, args, guards),
+          else: :pass
 
       action ->
         if Enum.member?(TrollBridge.allowed_actions(), action),
-           do: perform_lock(action, env, name, args, guards),
-           else: :pass
+          do: perform_lock(action, env, name, args, guards),
+          else: :pass
     end
   end
 
@@ -57,9 +56,9 @@ defmodule TrollBridge.Meta.FunctionLocker do
         else
           %mod{} =
             result =
-              unquote(module).redirect(unquote(conn_or_socket),
-                to: troll_bridge_redirect_on_failure_url()
-              )
+            unquote(module).redirect(unquote(conn_or_socket),
+              to: troll_bridge_redirect_on_failure_url()
+            )
 
           if mod == Plug.Conn do
             result

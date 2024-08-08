@@ -4,8 +4,8 @@ defmodule TrollBridge do
   """
 
   @type role_permissions() :: %{
-                                atom() => [atom()]
-                              }
+          atom() => [atom()]
+        }
 
   @type allowed_actions :: [atom()]
   def allowed_actions, do: get_config().actions()
@@ -44,6 +44,7 @@ defmodule TrollBridge do
     case scope(conn_or_socket) do
       nil ->
         role = role(conn_or_socket)
+
         conn_or_socket
         |> get_config().user_roles()
         |> Enum.member?(role)
@@ -68,10 +69,10 @@ defmodule TrollBridge do
   end
 
   defp get_module(%{private: private}),
-       do: Map.get(private, :phoenix_controller)
+    do: Map.get(private, :phoenix_controller)
 
   defp get_module(%{view: view}),
-       do: view
+    do: view
 
   def get_config, do: Application.get_env(:troll_bridge, :config)
 end
