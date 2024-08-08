@@ -1,0 +1,3 @@
+%{
+  "precuter": {:hex, :precuter, "0.1.0", "0dc77e677261369fc6f1d1e14061e65a290e3ebb274dcad1baa7b87eb29109b1", [:mix], [], "hexpm", "f1fb610b878ac6a2fd14a93961e69151442e798a1a6b4fa7a375121f6eff66c2"},
+}
