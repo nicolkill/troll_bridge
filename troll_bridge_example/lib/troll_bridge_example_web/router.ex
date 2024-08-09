@@ -10,6 +10,7 @@ defmodule TrollBridgeExampleWeb.Router do
 
     get "/", PageController, :index
     get "/show", PageController, :show
+    get "/show_alt", PageController, :show_alt
     get "/failure", PageController, :failure
   end
 end

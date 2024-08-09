@@ -1,4 +1,8 @@
 defmodule TrollBridge.Meta.FunctionLocker do
+  @moduledoc """
+  Internal use modules, avoid use it
+  """
+
   alias Precuter.Args, as: PrecuterArgs
   alias Precuter.Function, as: PrecuterFunction
 

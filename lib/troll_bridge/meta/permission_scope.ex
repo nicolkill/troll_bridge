@@ -1,4 +1,8 @@
 defmodule TrollBridge.Meta.PermissionScope do
+  @moduledoc """
+  Internal use modules, avoid use it
+  """
+
   defmacro __using__(_opts) do
     quote do
       import TrollBridge.Meta.PermissionScope

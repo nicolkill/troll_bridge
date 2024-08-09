@@ -18,6 +18,12 @@ defmodule TrollBridgeExampleWeb.PageController do
     |> json(%{success: true, call: :show})
   end
 
+  @action page_alt: :show
+  def show_alt(conn, _params) do
+    conn
+    |> json(%{success: true, call: :show})
+  end
+
   def failure(conn, _params) do
     conn
     |> json(%{forbidden: true})
